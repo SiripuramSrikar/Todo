@@ -16,6 +16,11 @@ function App() {
     }
     event.preventDefault();
   }
+  let list=todolist.map((value,index)=>{
+    return(
+      <TodolistItems value={value}/>
+    )
+  });
   return (
     <div className="App">
       <h1>ToDo List</h1>
@@ -23,8 +28,19 @@ function App() {
         <input type="text" name="toname"></input>
         <button>Save</button>
       </form>
+      <div className='outerdiv'>
+      <ul>
+        {list}
+      </ul>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+function TodolistItems({value}){
+  return(
+    <li>{value} <span>&times;</span></li>
+  );
+}

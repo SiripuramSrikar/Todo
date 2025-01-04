@@ -49,3 +49,27 @@ form input{
 form button{
   flex-basis: 20%;
 }
+.outerdiv{
+  width: 1170px;
+  margin: auto;
+}
+.outerdiv ul{
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  list-style: none;
+}
+.outerdiv ul li{
+  color: antiquewhite;
+  padding: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+  background-color: black;
+}
+.outerdiv ul li span{
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+}
