@@ -18,14 +18,18 @@ function App() {
   }
   let list=todolist.map((value,index)=>{
     return(
-      <TodolistItems value={value}/>
+      <TodolistItems  value={value} indexNo={index
+      } todolist={todolist} setTodolist={setTodolist} />
     )
   });
   return (
     <div className="App">
       <h1>ToDo List</h1>
       <form onSubmit={saveTodoList}>
-        <input type="text" name="toname"></input>
+      <input
+          type="text"
+          name='toname'
+        />
         <button>Save</button>
       </form>
       <div className='outerdiv'>
@@ -39,8 +43,16 @@ function App() {
 
 export default App;
 
-function TodolistItems({value}){
+function TodolistItems({value,indexNo,todolist,setTodolist}){
+  let [status,setStatus]=useState(false);
+  let deleteTask =()=> {
+    let updatedTasks = todolist.filter((_, i) => i !== indexNo);
+    setTodolist(updatedTasks);
+  };
+  let checkStatus=()=>{
+    setStatus(!status)
+  }
   return(
-    <li>{value} <span>&times;</span></li>
+    <li className={(status)?'completeTodo':''} onClick={checkStatus}>{indexNo+1}. {value} <span onClick={deleteTask}>&times;</span></li>
   );
 }

@@ -73,3 +73,8 @@ form button{
   cursor: pointer;
   position: absolute;
 }
+.completeTodo{
+  text-decoration: line-through;
+  color: red;
+  background-color: yellow;
+}
