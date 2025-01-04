@@ -1,80 +1,130 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Lora', serif; /* Elegant serif font */
+  background-color: #0cf5a7; /* Light background */
+  color: #3d3d3d; /* Dark gray text */
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* App Container */
 .App {
+  max-width: 600px;
+  margin: 50px auto;
   text-align: center;
+  padding: 30px 40px;
+  background: #ffffff; /* White background for the container */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  color: #3d3d3d; /* Dark text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-form{
-  width: 1170px;
-  margin: auto;
-  display: flex;
-  gap: 20px;
-}
-form input{
-  height: 40px;
-  flex-basis: 80%;
-}
-form button{
-  flex-basis: 20%;
-}
-.outerdiv{
-  width: 1170px;
-  margin: auto;
-}
-.outerdiv ul{
-  margin: 0px;
-  margin-top: 20px;
-  padding: 0px;
-  list-style: none;
-}
-.outerdiv ul li{
-  color: antiquewhite;
-  padding: 10px;
-  font-size: 25px;
+/* Heading */
+.App h1 {
+  font-size: 2.8rem;
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif for headings */
+  color: #2808fa; /* Copper color */
   margin-bottom: 20px;
-  position: relative;
-  text-align: left;
-  background-color: black;
+  font-style: italic;
+  transition: color 0.3s ease;
 }
-.outerdiv ul li span{
-  right: 20px;
+
+.App h1:hover {
+  color: #e67350; /* Lighter copper on hover */
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+form input[type="text"] {
+  width: 70%;
+  padding: 12px;
+  font-size: 1rem;
+  font-style: italic;
+  border: 2px solid #0074d9; /* Blue border */
+  border-radius: 8px;
+  outline: none;
+  background-color: #f1f1f1; /* Light background for input */
+  color: #3d3d3d; /* Dark text */
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+  background-color: #ffffff; /* Lighter background when focused */
+  border-color: #ff7f50; /* Copper border on focus */
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #ffffff; /* White text */
+  background-color: #ff7f50; /* Copper background */
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
-.completeTodo{
+
+form button:hover {
+  background-color: #e67350; /* Slightly darker copper on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Todo List Styling */
+.outerdiv {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  background: #ffffff; /* White background for list items */
+  border: 2px solid #eb6607; /* Blue border */
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: #3d3d3d; /* Dark text */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+li:hover {
+  background: #0ba8e1; /* Light gray on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Completed Todos */
+.completeTodo {
   text-decoration: line-through;
-  color: red;
-  background-color: yellow;
+  color: #1b1b1d; /* Dark copper for completed tasks */
+  background-color: #f0f0f0; /* Light gray background for completed */
+}
+
+/* Delete Button */
+li span {
+  color: #111111; /* Copper delete button */
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li span:hover {
+  color: #e67350; /* Darker copper on hover */
+  transform: scale(1.2); /* Zoom effect on hover */
 }
