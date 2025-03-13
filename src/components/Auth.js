@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Auth.css';
+import Logo from './Logo';
 
 function Auth({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -63,6 +64,7 @@ function Auth({ onLogin }) {
   return (
     <div className="auth-container">
       <div className="auth-box">
+        <Logo />
         <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
         {error && <div className="auth-error">{error}</div>}
         <form onSubmit={handleSubmit}>

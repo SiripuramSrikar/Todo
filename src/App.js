@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Auth from './components/Auth';
+import Logo from './components/Logo';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -76,7 +77,7 @@ function App() {
   return (
     <div className="App">
       <div className="app-header">
-        <h1>ToDo List</h1>
+        <Logo />
         <div className="user-info">
           <span>Welcome, {user.name}</span>
           <button onClick={handleLogout} className="logout-button">
