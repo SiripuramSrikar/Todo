@@ -123,7 +123,7 @@ function App() {
           </select>
         </div>
 
-        <button type="submit">Add Task</button>
+        <button type="submit" className='b1'>Add Task</button>
       </form>
 
       <div className="filters">

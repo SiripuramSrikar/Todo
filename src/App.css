@@ -549,3 +549,12 @@ li {
   color: white;
   transform: translateY(-1px);
 }
+.b1{
+    color: white;
+    background-color: blue;
+    margin-right: 300px;
+    margin-left: 300px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
